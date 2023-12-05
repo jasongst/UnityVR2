@@ -12,6 +12,14 @@ public class BallSpawner : MonoBehaviour
     [SerializeField]
     private GameObject m_Ball;
 
+    public void Awake()
+    {
+        spawnBallAction.action.performed += ctx =>
+        {
+            SpawnBall();
+        };
+    }
+
     // Start is called before the first frame update
     void Start()
     {
