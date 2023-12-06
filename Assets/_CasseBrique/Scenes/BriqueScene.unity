@@ -1891,7 +1891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739875278370856128, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 739875278370856128, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: m_AngularDrag
