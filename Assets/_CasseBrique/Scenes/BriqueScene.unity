@@ -1951,7 +1951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6373378161438868141, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: timeBeforeDestroy
-      value: 5555
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6373378161438868141, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: callbacks.m_PersistentCalls.m_Calls.Array.size
