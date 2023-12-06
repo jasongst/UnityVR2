@@ -25,20 +25,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.269
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.026
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -46,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -58,16 +70,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 01091884453c477479837f4a104d253e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 01091884453c477479837f4a104d253e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 823ac0e34852f1946b70b81aa0a7763c, type: 2}
+      objectReference: {fileID: 2100000, guid: 08209d9ade70f584888a7e049fb5c00e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -302,3 +318,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cb8fe7a71f2db4b8eb73ca91423296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakBrickCallbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: incrementScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timeBeforeDestroy: 0
