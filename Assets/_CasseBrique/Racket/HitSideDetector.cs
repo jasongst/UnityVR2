@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class HitSideDetector : MonoBehaviour
 {
+    public XRBaseController racketController;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
+            racketController.SendHapticImpulse(.5f, .5f);
             var renderer = collision.gameObject.GetComponent<MeshRenderer>();
             Debug.Log("hit");
             ContactPoint hit = collision.GetContact(0);
