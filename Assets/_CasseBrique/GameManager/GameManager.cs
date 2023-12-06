@@ -35,6 +35,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("incrementing score");
         score += 1;
-        scoreUi.SetText("Score : test " + score);
+        scoreUi.SetText("Score : " + score);
     }
 }

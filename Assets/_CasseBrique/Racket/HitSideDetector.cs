@@ -6,10 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class HitSideDetector : MonoBehaviour
 {
     public XRBaseController racketController;
+    private static readonly int TileColor = Shader.PropertyToID("_TileColor");
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.CompareTag("Ball"))
         {
             racketController.SendHapticImpulse(.5f, .5f);
             var renderer = collision.gameObject.GetComponent<MeshRenderer>();
@@ -20,12 +21,12 @@ public class HitSideDetector : MonoBehaviour
             if (angle > 90)
             {
                 Debug.Log("front");
-                renderer.material.color = Color.red;
+                renderer.material.SetColor(TileColor, Color.blue);
             }
             else
             {
                 Debug.Log("back");
-                renderer.material.color = Color.blue;
+                renderer.material.SetColor(TileColor, Color.red);
             }
         }
     }
