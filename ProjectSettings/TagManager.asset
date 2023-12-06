@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+  - Anchor
+  - Brick
   layers:
   - Default
   - TransparentFX
