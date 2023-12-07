@@ -6,12 +6,17 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class Ball : MonoBehaviour
 {
     public UnityEvent breakBrickCallbacks;
 
     public GameObject graphicsGameObject;
+    public GameObject brickParticles;
+
+    public AudioClip brickDestroyedClip;
+    private AudioSource brickDestroyedSource;
     
     public float timeBeforeDestroy = 0.150f;
     
@@ -21,6 +26,12 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         Assert.IsTrue(breakBrickCallbacks.GetPersistentEventCount() > 0, "[BALL] breakBrickCallbacks is unset !");
+
+        brickDestroyedSource = gameObject.AddComponent<AudioSource>();
+        brickDestroyedSource.loop = false;
+        brickDestroyedSource.clip = brickDestroyedClip;
+        brickDestroyedSource.volume = 1.0f;
+        brickDestroyedSource.pitch = 1.0f;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -28,6 +39,11 @@ public class Ball : MonoBehaviour
         GameObject otherObject = other.gameObject;
         if (otherObject.CompareTag("Brick"))
         {
+            GameObject brickDestroyedParticles = Instantiate(brickParticles, otherObject.transform.position, Quaternion.identity);
+            brickDestroyedParticles.GetComponent<ParticleSystem>().Play();
+
+            brickDestroyedSource.Play();
+
             Destroy(otherObject, timeBeforeDestroy);
             Invoke(nameof(invokeCallbacks), timeBeforeDestroy);
         }
