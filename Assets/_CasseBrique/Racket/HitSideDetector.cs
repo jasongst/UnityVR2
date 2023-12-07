@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using _CasseBrique;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -10,23 +11,30 @@ public class HitSideDetector : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        GameObject gameObject = collision.gameObject;
+        if (gameObject.CompareTag("Ball"))
         {
             racketController.SendHapticImpulse(.5f, .5f);
-            var renderer = collision.gameObject.GetComponent<MeshRenderer>();
-            Debug.Log("hit");
+            
+            var renderer = gameObject.GetComponent<MeshRenderer>();
             ContactPoint hit = collision.GetContact(0);
             float angle = Vector3.Angle(hit.normal, transform.forward);
-            Debug.Log(angle);
+            
+            Ball ball = gameObject.GetComponent<Ball>();
             if (angle > 90)
             {
                 Debug.Log("front");
-                renderer.material.SetColor(TileColor, Color.blue);
+                Debug.Log(ball);
+                // front of the racket
+                ball.applyGraphics(new BallGraphicsParams(Color.blue, Color.cyan));
+                
             }
             else
             {
                 Debug.Log("back");
-                renderer.material.SetColor(TileColor, Color.red);
+
+                // back of the racket
+                ball.applyGraphics(new BallGraphicsParams(Color.red, Color.magenta));
             }
         }
     }
