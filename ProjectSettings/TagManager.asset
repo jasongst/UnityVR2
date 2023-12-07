@@ -7,6 +7,7 @@ TagManager:
   - Ball
   - Anchor
   - Brick
+  - Racket
   layers:
   - Default
   - TransparentFX
