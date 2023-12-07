@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -7665237132062272856}
   - component: {fileID: 6473359710362555916}
   - component: {fileID: 5434118052828927678}
+  - component: {fileID: 1467024447123813957}
   m_Layer: 0
   m_Name: TennisRacket 2
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115681423471396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 3079638730125280309}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -237,6 +238,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 43b61c14ecc15ac4cb1d3258591d7562, type: 3}
+--- !u!114 &1467024447123813957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115681423471396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec67d80000ef0a4f9b620cd02599608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racketController: {fileID: 0}
 --- !u!1 &534290936666384915
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,10 +359,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7885461025728054648}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5366532, y: -0, z: -0, w: 0.843803}
+  m_LocalRotation: {x: -0.3794716, y: 0.59665793, z: 0.3794705, w: 0.59665966}
   m_LocalPosition: {x: 0.000000014901161, y: 0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4136792539524354}
-  m_LocalEulerAnglesHint: {x: -64.912, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -64.912, y: 90, z: 0}
