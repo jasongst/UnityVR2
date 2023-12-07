@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6b1c9c36c4c34654bb9bd07c0b4ea906
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ballHitClip: {fileID: 8300000, guid: 1af252549ff799f4c99cba5fb3e43655, type: 3}
+  - racketSwooshClip: {fileID: 8300000, guid: 2c1f11d86a6f5be45b856df5da25dc6e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
