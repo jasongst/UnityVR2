@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
 
     public GameObject graphicsGameObject;
     public GameObject brickParticles;
+    public GameObject rippleParticles;
 
     public AudioClip brickDestroyedClip;
     private AudioSource brickDestroyedSource;
@@ -46,6 +47,12 @@ public class Ball : MonoBehaviour
 
             Destroy(otherObject, timeBeforeDestroy);
             Invoke(nameof(invokeCallbacks), timeBeforeDestroy);
+        }
+        else if (otherObject.CompareTag("WallSide"))
+        {
+            GameObject rippleEffect = Instantiate(rippleParticles, new Vector3(otherObject.transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            rippleEffect.transform.Rotate(new Vector3(0, 90, 0));
+            rippleEffect.GetComponent<ParticleSystem>().Play();
         }
     }
 
