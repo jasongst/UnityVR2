@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_CasseBrique/UI/progress-bar.uss?fileID=7433441132597879392&amp;guid=27401f0c0e5a7464eb85c503ed412214&amp;type=3#progress-bar" />
+    <ui:ProgressBar value="0" name="ProgressBar" high-value="100" />
+</ui:UXML>
