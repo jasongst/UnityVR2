@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _CasseBrique;
+using _CasseBrique.Brick;
+using _CasseBrique.Racket;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -23,6 +25,11 @@ public class Ball : MonoBehaviour
     private static readonly int TileColor = Shader.PropertyToID("_TileColor");
     private static readonly int GridColor = Shader.PropertyToID("_GridColor");
 
+    public RacketHitSide racketHitSide;
+
+    public BallGraphicsParams frontSideHitGraphics = new BallGraphicsParams(Color.blue, Color.cyan);
+    public BallGraphicsParams backSideHitGraphics = new BallGraphicsParams(Color.red, Color.magenta);
+    
     private void Start()
     {
         Assert.IsTrue(breakBrickCallbacks.GetPersistentEventCount() > 0, "[BALL] breakBrickCallbacks is unset !");
@@ -39,13 +46,20 @@ public class Ball : MonoBehaviour
         GameObject otherObject = other.gameObject;
         if (otherObject.CompareTag("Brick"))
         {
-            GameObject brickDestroyedParticles = Instantiate(brickParticles, otherObject.transform.position, Quaternion.identity);
-            brickDestroyedParticles.GetComponent<ParticleSystem>().Play();
+            Brick brick = other.gameObject.GetComponent<Brick>();
+            
+            if (
+                (this.racketHitSide == RacketHitSide.Front && brick.type == BrickType.FrontRacket) 
+                || (this.racketHitSide == RacketHitSide.Back && brick.type == BrickType.BackRacket)
+                )
+            {
+                GameObject brickDestroyedParticles = Instantiate(brickParticles, otherObject.transform.position, Quaternion.identity);
+                brickDestroyedParticles.GetComponent<ParticleSystem>().Play();
 
-            brickDestroyedSource.Play();
-
-            Destroy(otherObject, timeBeforeDestroy);
-            Invoke(nameof(invokeCallbacks), timeBeforeDestroy);
+                brickDestroyedSource.Play();
+                Destroy(otherObject, timeBeforeDestroy);
+                Invoke(nameof(invokeCallbacks), timeBeforeDestroy);
+            }
         }
     }
 
@@ -54,7 +68,13 @@ public class Ball : MonoBehaviour
         breakBrickCallbacks.Invoke();
     }
 
-    public void applyGraphics(BallGraphicsParams newGraphicsParams)
+    public void racketHit(RacketHitSide hitSide)
+    {
+        racketHitSide = hitSide;
+        applyGraphics(racketHitSide == RacketHitSide.Front ? frontSideHitGraphics : backSideHitGraphics);
+    }
+
+    private void applyGraphics(BallGraphicsParams newGraphicsParams)
     {
         Debug.Log("applyGraphics");
         // Set the particles around the ball
