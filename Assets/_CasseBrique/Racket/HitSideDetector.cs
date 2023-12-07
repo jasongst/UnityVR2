@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using _CasseBrique;
+using _CasseBrique.Racket;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class HitSideDetector : MonoBehaviour
 {
     public XRBaseController racketController;
-    private static readonly int TileColor = Shader.PropertyToID("_TileColor");
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,21 +21,8 @@ public class HitSideDetector : MonoBehaviour
             float angle = Vector3.Angle(hit.normal, transform.forward);
             
             Ball ball = gameObject.GetComponent<Ball>();
-            if (angle > 90)
-            {
-                Debug.Log("front");
-                Debug.Log(ball);
-                // front of the racket
-                ball.applyGraphics(new BallGraphicsParams(Color.blue, Color.cyan));
+            ball.racketHit(angle > 90 ? RacketHitSide.Front : RacketHitSide.Back);
                 
-            }
-            else
-            {
-                Debug.Log("back");
-
-                // back of the racket
-                ball.applyGraphics(new BallGraphicsParams(Color.red, Color.magenta));
-            }
         }
     }
 }
