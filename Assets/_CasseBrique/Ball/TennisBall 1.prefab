@@ -415,7 +415,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   graphicsGameObject: {fileID: 3387021348768491409}
+  brickParticles: {fileID: 0}
+  rippleParticles: {fileID: 0}
+  brickDestroyedClip: {fileID: 0}
   timeBeforeDestroy: 0
+  racketHitSide: 0
 --- !u!114 &3596763472263335026
 MonoBehaviour:
   m_ObjectHideFlags: 0

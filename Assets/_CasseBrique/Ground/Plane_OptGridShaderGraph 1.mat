@@ -43,8 +43,8 @@ Material:
     - _QueueOffset: 0
     - _Thickness: 1.02
     m_Colors:
-    - _GridColor: {r: 15.0617695, g: 6.0637474, b: 0, a: 1}
-    - _TileColor: {r: 1.1294118, g: 0.3062651, b: 0.039215673, a: 1}
+    - _GridColor: {r: 0, g: 0, b: 0, a: 1}
+    - _TileColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tiling: {r: 1000, g: 1000, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8501977454392228862

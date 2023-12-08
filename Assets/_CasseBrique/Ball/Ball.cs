@@ -15,7 +15,8 @@ public class Ball : MonoBehaviour
     public UnityEvent breakBrickCallbacks;
 
     public GameObject graphicsGameObject;
-    public GameObject brickParticles;
+    public GameObject frontBrickParticles;
+    public GameObject backBrickParticles;
     public GameObject rippleParticles;
 
     public AudioClip brickDestroyedClip;
@@ -28,8 +29,8 @@ public class Ball : MonoBehaviour
 
     public RacketHitSide racketHitSide;
 
-    public BallGraphicsParams frontSideHitGraphics = new BallGraphicsParams(Color.blue, Color.cyan);
-    public BallGraphicsParams backSideHitGraphics = new BallGraphicsParams(Color.red, Color.magenta);
+    public BallGraphicsParams frontSideHitGraphics = new BallGraphicsParams(Color.yellow, Color.white);
+    public BallGraphicsParams backSideHitGraphics = new BallGraphicsParams(Color.magenta, Color.white);
     
     private void Start()
     {
@@ -54,7 +55,7 @@ public class Ball : MonoBehaviour
                 || (this.racketHitSide == RacketHitSide.Back && brick.type == BrickType.BackRacket)
                 )
             {
-                GameObject brickDestroyedParticles = Instantiate(brickParticles, otherObject.transform.position, Quaternion.identity);
+                GameObject brickDestroyedParticles = Instantiate(brick.type == BrickType.FrontRacket ? frontBrickParticles : backBrickParticles, otherObject.transform.position, Quaternion.identity);
                 brickDestroyedParticles.GetComponent<ParticleSystem>().Play();
 
                 brickDestroyedSource.Play();
@@ -66,6 +67,12 @@ public class Ball : MonoBehaviour
         {
             GameObject rippleEffect = Instantiate(rippleParticles, new Vector3(otherObject.transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             rippleEffect.transform.Rotate(new Vector3(0, 90, 0));
+            rippleEffect.GetComponent<ParticleSystem>().Play();
+        }
+        else if (otherObject.CompareTag("WallUpdown"))
+        {
+            GameObject rippleEffect = Instantiate(rippleParticles, new Vector3(transform.position.x, otherObject.transform.position.y, transform.position.z), Quaternion.identity);
+            rippleEffect.transform.Rotate(new Vector3(90, 90, 0));
             rippleEffect.GetComponent<ParticleSystem>().Play();
         }
     }
