@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_CasseBrique/Scenes/BriqueScene.unity
     guid: 25a1d545616bc6746bb554ac63aa4e77
   - enabled: 0
     path: Assets/_CasseBrique/Scenes/BasicScene.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
+  - enabled: 1
+    path: Assets/_CasseBrique/Scenes/SynthwaveScene.unity
+    guid: 08f9f185b4070754ca72e25570b19993
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
