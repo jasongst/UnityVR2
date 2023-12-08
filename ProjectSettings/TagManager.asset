@@ -8,6 +8,7 @@ TagManager:
   - Anchor
   - Brick
   - Racket
+  - WallSide
   layers:
   - Default
   - TransparentFX
