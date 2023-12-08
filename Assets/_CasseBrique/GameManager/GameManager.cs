@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     }
     
     public void incrementScore()
-    {
+    {   
         score += 1;
         scoreUi.SetText(score.ToString());
 
