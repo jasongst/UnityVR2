@@ -7549,6 +7549,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857420086}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &881485633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115681423471396, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+  m_PrefabInstance: {fileID: 1454076884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &884633442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9214,6 +9219,10 @@ PrefabInstance:
       propertyPath: racketController
       value: 
       objectReference: {fileID: 86827266}
+    - target: {fileID: 2321457503487974269, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 571232f978c35f64f9e5da6f58bac432, type: 2}
     - target: {fileID: 3079638730125280309, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.59665966
@@ -9245,14 +9254,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1115681423471396, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454076892}
+    - targetCorrespondingSourceObject: {fileID: 1115681423471396, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454076891}
   m_SourcePrefab: {fileID: 100100000, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
 --- !u!114 &1454076885 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6473359710362555916, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
   m_PrefabInstance: {fileID: 1454076884}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 881485633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -9263,6 +9278,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3079638730125280309, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
   m_PrefabInstance: {fileID: 1454076884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454076891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881485633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1c9c36c4c34654bb9bd07c0b4ea906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballHitClip: {fileID: 8300000, guid: 1af252549ff799f4c99cba5fb3e43655, type: 3}
+--- !u!114 &1454076892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881485633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648a9549516a3494eb88e5684369e5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racketSwooshClip: {fileID: 8300000, guid: 2c1f11d86a6f5be45b856df5da25dc6e, type: 3}
 --- !u!1 &1462641842
 GameObject:
   m_ObjectHideFlags: 0

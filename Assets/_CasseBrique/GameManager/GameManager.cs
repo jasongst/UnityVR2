@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         source.clip = music;
         source.loop = true;
         source.pitch = 1f;
-        source.volume = 0.5f;
+        source.volume = 0.3f;
 
         source.Play();
 
