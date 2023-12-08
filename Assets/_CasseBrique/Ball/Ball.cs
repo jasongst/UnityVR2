@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
 
     public RacketHitSide racketHitSide;
 
-    public BallGraphicsParams frontSideHitGraphics = new BallGraphicsParams(Color.yellow, Color.white);
+    public BallGraphicsParams frontSideHitGraphics = new BallGraphicsParams(new Color(197f / 255f, 82f / 255f, 13f / 255f), Color.white);
     public BallGraphicsParams backSideHitGraphics = new BallGraphicsParams(Color.magenta, Color.white);
     
     private void Start()
