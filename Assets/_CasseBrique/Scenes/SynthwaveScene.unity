@@ -4468,6 +4468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1943105460578936474, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008
+      objectReference: {fileID: 0}
     - target: {fileID: 2401357408587087827, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -4519,6 +4523,10 @@ PrefabInstance:
     - target: {fileID: 6608838821194203414, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
       propertyPath: m_Name
       value: TennisRacket
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082103577526744776, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 9009899977083185159, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
       propertyPath: m_Convex
