@@ -3759,6 +3759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2321457503487974269, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 571232f978c35f64f9e5da6f58bac432, type: 2}
     - target: {fileID: 3079638730125280309, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.59665966
@@ -3797,6 +3801,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1115681423471396, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1454076894}
+    - targetCorrespondingSourceObject: {fileID: 1115681423471396, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454076898}
   m_SourcePrefab: {fileID: 100100000, guid: bcd248e7a355f4afaa4e6d967e1f5f59, type: 3}
 --- !u!114 &1454076885 stripped
 MonoBehaviour:
@@ -3840,6 +3847,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballHitClip: {fileID: 8300000, guid: 1af252549ff799f4c99cba5fb3e43655, type: 3}
+--- !u!114 &1454076898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163992378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648a9549516a3494eb88e5684369e5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racketSwooshClip: {fileID: 8300000, guid: 2c1f11d86a6f5be45b856df5da25dc6e, type: 3}
 --- !u!1 &1462641842
 GameObject:
   m_ObjectHideFlags: 0
