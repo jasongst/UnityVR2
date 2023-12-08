@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 648a9549516a3494eb88e5684369e5e5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - racketSwooshClip: {fileID: 8300000, guid: 2c1f11d86a6f5be45b856df5da25dc6e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
