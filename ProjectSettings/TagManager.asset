@@ -9,6 +9,8 @@ TagManager:
   - Brick
   - Racket
   - WallSide
+  - Missile
+  - WallUpdown
   layers:
   - Default
   - TransparentFX
