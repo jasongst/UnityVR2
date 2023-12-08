@@ -83,7 +83,6 @@ public class Ball : MonoBehaviour
 
     private void applyGraphics(BallGraphicsParams newGraphicsParams)
     {
-        Debug.Log("applyGraphics");
         // Set the particles around the ball
         var ballParticleSystem = graphicsGameObject.GetComponent<ParticleSystem>().main;
         ballParticleSystem.startColor = newGraphicsParams.ballColor;

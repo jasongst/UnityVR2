@@ -72,8 +72,6 @@ public class GameManager : MonoBehaviour
     
     public void incrementScore()
     {
-        Debug.Log("incrementing score");
-
         score += 1;
         scoreUi.SetText(score.ToString());
 
