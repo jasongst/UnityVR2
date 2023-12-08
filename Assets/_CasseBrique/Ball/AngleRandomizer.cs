@@ -5,6 +5,8 @@ using UnityEngine;
 public class AngleRandomizer : MonoBehaviour
 {
     private Rigidbody rb;
+    public float addedForce;
+    public float randomRange;
 
     void Awake()
     {
@@ -15,7 +17,19 @@ public class AngleRandomizer : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Racket"))
         {
-            rb.AddForce(-collision.contacts[0].normal + new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1)));
+            Vector3 normal = collision.contacts[0].normal;
+            Vector3 vel = rb.velocity;
+
+
+            Vector3 reflect = Vector3.Reflect(vel, normal);
+            Vector3 reflectNormalized = reflect.normalized;
+            float reflectMagnitude = reflect.magnitude;
+
+            reflectNormalized.x += Random.Range(-randomRange, randomRange);
+            reflectNormalized.y += Random.Range(-randomRange, randomRange);
+            reflectNormalized.z += Random.Range(-randomRange, randomRange);
+
+            rb.velocity = reflectNormalized * reflectMagnitude;
         }
     }
 }
