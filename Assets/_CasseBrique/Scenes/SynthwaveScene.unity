@@ -3033,7 +3033,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 226141437026809544, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
   m_PrefabInstance: {fileID: 401089718}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 401089719}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -4468,6 +4468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2401357408587087827, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5835714349047995308, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.055
@@ -4516,11 +4520,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: TennisRacket
       objectReference: {fileID: 0}
+    - target: {fileID: 9009899977083185159, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6608838821194203414, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401089721}
+    - targetCorrespondingSourceObject: {fileID: 6608838821194203414, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401089720}
   m_SourcePrefab: {fileID: 100100000, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+--- !u!1 &401089719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6608838821194203414, guid: 8e60d942a979a7a42a806e859771c0e4, type: 3}
+  m_PrefabInstance: {fileID: 401089718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &401089720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401089719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1c9c36c4c34654bb9bd07c0b4ea906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballHitClip: {fileID: 8300000, guid: 1af252549ff799f4c99cba5fb3e43655, type: 3}
+--- !u!114 &401089721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401089719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648a9549516a3494eb88e5684369e5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  racketSwooshClip: {fileID: 8300000, guid: 2c1f11d86a6f5be45b856df5da25dc6e, type: 3}
+  minVelocity: 5
 --- !u!1001 &415818444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4544,11 +4590,11 @@ PrefabInstance:
     - target: {fileID: 8642917677200824965, guid: 8964c1018e35be64bbe1592dfa2c6de9, type: 3}
       propertyPath: winText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 546074597}
     - target: {fileID: 8642917677200824965, guid: 8964c1018e35be64bbe1592dfa2c6de9, type: 3}
       propertyPath: progressBarDocument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1044054056}
     - target: {fileID: 9105109715065751795, guid: 8964c1018e35be64bbe1592dfa2c6de9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6067098
@@ -17193,7 +17239,7 @@ PrefabInstance:
     - target: {fileID: 6373378161438868141, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: brickDestroyedClip
       value: 
-      objectReference: {fileID: 8300000, guid: ff9e726fbbcccaa4896094aae560ca35, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e9bff56ee93c6f42b214141e44e763d, type: 3}
     - target: {fileID: 6373378161438868141, guid: 6cdd95a69a651423baf1d180d900b5ee, type: 3}
       propertyPath: graphicsGameObject
       value: 

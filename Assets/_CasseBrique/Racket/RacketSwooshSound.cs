@@ -12,6 +12,8 @@ public class RacketSwooshSound : MonoBehaviour
     private bool firstPlayed = false;
     private bool swooshPlayed = false;
 
+    public float minVelocity = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class RacketSwooshSound : MonoBehaviour
     void Update()
     {
         Rigidbody racketRb = gameObject.GetComponent<Rigidbody>();
-        if (swooshPlayed == false && (racketRb.velocity.x > 1f || racketRb.velocity.y > 1f || racketRb.velocity.z > 1f))
+        if (swooshPlayed == false && (racketRb.velocity.x > minVelocity || racketRb.velocity.y > minVelocity || racketRb.velocity.z > minVelocity))
         {
             Debug.Log("Vitesse");
             racketSwoosh.Play();
