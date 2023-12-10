@@ -10,7 +10,6 @@ public class BallHitSound : MonoBehaviour
     public AudioClip ballHitClip;
     
     private bool firstPlayed = false;
-    private bool swooshPlayed = false;
 
     // Start is called before the first frame update
     void Start()

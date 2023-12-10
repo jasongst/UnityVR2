@@ -9,7 +9,6 @@ public class RacketSwooshSound : MonoBehaviour
 
     public AudioClip racketSwooshClip;
 
-    private bool firstPlayed = false;
     private bool swooshPlayed = false;
 
     public float minVelocity = 5f;
@@ -26,14 +25,12 @@ public class RacketSwooshSound : MonoBehaviour
         Rigidbody racketRb = gameObject.GetComponent<Rigidbody>();
         if (swooshPlayed == false && (racketRb.velocity.x > minVelocity || racketRb.velocity.y > minVelocity || racketRb.velocity.z > minVelocity))
         {
-            Debug.Log("Vitesse");
             racketSwoosh.Play();
             swooshPlayed = true;
         }
 
         if (swooshPlayed == true && (racketRb.velocity.x < 0.1f && racketRb.velocity.y < 0.1f && racketRb.velocity.z < 0.1f))
         {
-            Debug.Log("Reset vitesse");
             swooshPlayed = false;
         }
     }
