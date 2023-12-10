@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AngleRandomizer : MonoBehaviour
 {
@@ -22,14 +24,23 @@ public class AngleRandomizer : MonoBehaviour
 
 
             Vector3 reflect = Vector3.Reflect(vel, normal);
+            
+            Debug.DrawRay(collision.contacts[0].point, reflect.normalized, Color.red, 10f);
+            
             Vector3 reflectNormalized = reflect.normalized;
             float reflectMagnitude = reflect.magnitude;
 
-            reflectNormalized.x += Random.Range(-randomRange, randomRange);
-            reflectNormalized.y += Random.Range(-randomRange, randomRange);
-            reflectNormalized.z += Random.Range(-randomRange, randomRange);
+            if (!collision.gameObject.CompareTag("Brick"))
+            {
+                reflectNormalized.x += Random.Range(-randomRange, randomRange);
+                reflectNormalized.y += Random.Range(-randomRange, randomRange);
+                reflectNormalized.z += Random.Range(-randomRange, randomRange);
+            }
 
             rb.velocity = reflectNormalized * reflectMagnitude;
+            
+            Debug.DrawRay(collision.contacts[0].point, rb.velocity.normalized, Color.green, 10f);
         }
+
     }
 }
