@@ -30,7 +30,7 @@ public class AngleRandomizer : MonoBehaviour
             Vector3 reflectNormalized = reflect.normalized;
             float reflectMagnitude = reflect.magnitude;
 
-            if (!collision.gameObject.CompareTag("Brick"))
+            if (!collision.gameObject.CompareTag("Brick")) // Apply randomness only on wall hit
             {
                 reflectNormalized.x += Random.Range(-randomRange, randomRange);
                 reflectNormalized.y += Random.Range(-randomRange, randomRange);
