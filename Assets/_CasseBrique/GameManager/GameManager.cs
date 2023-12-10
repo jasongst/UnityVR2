@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     private int score;
-    private int nbBricks = 282;
+    private int nbBricks = 276;
     private bool gameIsFinished = false;
 
     // Sound
